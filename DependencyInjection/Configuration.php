@@ -92,6 +92,7 @@ class Configuration implements ConfigurationInterface
                     ->addDefaultsIfNotSet()
                     ->canBeUnset()
                     ->children()
+                        ->scalarNode('enabled')->defaultTrue()->end()
                         ->scalarNode('name')->defaultValue('flashes')->end()
                         ->scalarNode('path')->defaultValue('/')->end()
                         ->scalarNode('domain')->defaultNull()->end()
